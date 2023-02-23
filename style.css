@@ -1,0 +1,147 @@
+:root {
+  --dark-blue: hsl(209, 23%, 22%);
+  --very-dark-blue: hsl(207, 26%, 17%);
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+body {
+  background: var(--very-dark-blue);
+  font-family: "Nunito", sans-serif;
+}
+
+header {
+  background: var(--dark-blue);
+  color: var(--white);
+  padding: 24px 64px;
+  box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.1);
+  margin-bottom: 32px;
+}
+
+header .header-logo {
+  font-size: 1.25rem;
+  font-weight: 800;
+}
+
+.search-container {
+  padding: 32px 64px;
+  display: flex;
+}
+
+.search-container .input-box {
+  background: var(--dark-blue);
+  border-radius: 4px;
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.1);
+  width: 40%;
+}
+
+.input-box label span {
+  color: var(--white);
+  font-size: 1.5rem;
+}
+
+.input-box input {
+  background: transparent;
+  border: none;
+  outline: none;
+  padding-left: 16px;
+  width: 100%;
+  color: var(--white);
+}
+
+.input-box input::placeholder {
+  color: var(--white);
+}
+
+main {
+  padding: 16px 64px;
+}
+
+main .list-countries {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.list-countries .country {
+  background: var(--dark-blue);
+  border-radius: 4px;
+  max-width: 256px;
+  box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.1);
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+
+.country .image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 4px 4px 0 0;
+}
+
+.country .content {
+  padding: 24px;
+  color: var(--white);
+}
+
+.content .name-country {
+  font-size: 1rem;
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+
+.content .infos {
+  display: flex;
+  flex-direction: column;
+}
+
+.infos li h3 {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+li h3 span {
+  font-weight: 300;
+  color: rgba(231, 231, 231, 0.9);
+}
+
+@media (max-width: 700px) {
+  header {
+    padding: 16px 32px;
+  }
+
+  header .header-logo {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  .search-container {
+    padding: 16px 32px;
+  }
+
+  .search-container .input-box {
+    width: 100%;
+  }
+
+  main {
+    padding: 16px 32px;
+  }
+
+  main .list-countries {
+    justify-content: center;
+  }
+}
